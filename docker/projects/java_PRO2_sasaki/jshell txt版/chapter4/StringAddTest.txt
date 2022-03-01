@@ -1,0 +1,1 @@
+System.out.println("1 + 2の答えは" + 1 + 2);
