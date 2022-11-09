@@ -1,0 +1,13 @@
+public class Urudosi0 {
+  public static void main(String[] args) {
+    String s = System.console().readLine("西暦を入力してください。");
+    int y = Integer.parseInt(s);
+    if (y%400 == 0) {
+      System.out.println("うるう年です。");
+    } else if ((y%100!=0)&&(y%4==0)) {
+      System.out.println("うるう年です。");
+    } else {
+      System.out.println("うるう年ではありません。");
+    }
+  }
+}

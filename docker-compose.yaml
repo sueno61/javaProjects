@@ -1,0 +1,11 @@
+version: '3'
+services:
+  java:
+    image: sueno61/open-jdk
+    container_name: jdk-env
+    ports:
+      - 8000:8000
+      - 8080:8080
+    tty: true
+    volumes:
+      - ./docker/projects:/home/projects
