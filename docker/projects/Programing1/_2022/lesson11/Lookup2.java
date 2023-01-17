@@ -5,7 +5,7 @@ public class Lookup2 {
             ns[i] = Integer.parseInt(args[i]);
         }
 
-        String s = System.console().readLine("key = ");
+        String s = System.console().readLine("n = ");
         int n = Integer.parseInt(s);
         int cnt = 0;
         for (int i=0; i<args.length; i++) {
