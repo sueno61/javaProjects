@@ -2,7 +2,7 @@ package Lesson07;
 
 import java.util.Random;
 
-public class Scores2 {
+public class Scores2prv {
 
 	public static void main(String[] args) {
 
@@ -39,8 +39,8 @@ public class Scores2 {
 			System.out.printf("%4d", score[i][1]);
 			System.out.printf("%4d", score[i][2]);
 
-			System.out.print("  " + mark[i]);
-			System.out.printf("%4d", def[i]);
+			System.out.print("     " + mark[i]);
+			System.out.printf("%6d", def[i]);
 			System.out.println("");
 		}
 

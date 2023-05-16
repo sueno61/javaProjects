@@ -38,14 +38,14 @@ public class TicTacToe {
 		printBoard(board);
 		System.out.println("Start!　先手入力");
 
-		Scanner sin = new Scanner(System.in);
+		Scanner sysIn = new Scanner(System.in);
 
 		boolean top = true;
 
 		for (int i = 0; i < 9; i++) {
 
-			int row = sin.nextInt();
-			int col = sin.nextInt();
+			int row = sysIn.nextInt();
+			int col = sysIn.nextInt();
 
 			if (top) {
 				board[row][col] = '●';
@@ -66,7 +66,7 @@ public class TicTacToe {
 		}
 
 		System.out.println("*** end ***");
-		sin.close();
+		sysIn.close();
 
 	}
 

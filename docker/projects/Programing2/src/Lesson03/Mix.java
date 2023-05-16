@@ -8,11 +8,11 @@ public class Mix {
 		int l1 = args[0].length();
 		int l2 = args[1].length();
 
-		//		if (l1 > l2) {
-		//			l = l1;
-		//		} else {
-		//			l = l2;
-		//		}
+		// if (l1 > l2) {
+		// l = l1;
+		// } else {
+		// l = l2;
+		// }
 		l = l1 > l2 ? l1 : l2;
 
 		for (int i = 0; i < l; i++) {
@@ -20,10 +20,12 @@ public class Mix {
 				System.out.print(args[0].charAt(i));
 			}
 			if (i < l2) {
-				System.out.print(args[1].charAt(l2 - i - 0));
+				System.out.print(args[1].charAt(l2 - i - 1));
 			}
 
 		}
+
+		System.out.println();
 
 	}
 

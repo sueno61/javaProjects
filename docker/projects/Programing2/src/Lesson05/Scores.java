@@ -1,8 +1,8 @@
-package Lesson07;
+package Lesson05;
 
 import java.util.Random;
 
-public class Scores2 {
+public class Scores {
 
 	public static void main(String[] args) {
 
