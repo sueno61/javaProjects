@@ -74,17 +74,23 @@ public class Scores2 {
 
 		double avr = avrg(x, y);
 
-		if (avr < 60) {
-			return 'D';
-		} else if (avr < 70) {
-			return 'C';
-		} else if (avr < 80) {
-			return 'B';
-		} else if (avr < 90) {
-			return 'A';
-		} else {
-			return 'S';
-		}
+		// if (avr < 60) {
+		// 	return 'D';
+		// } else if (avr < 70) {
+		// 	return 'C';
+		// } else if (avr < 80) {
+		// 	return 'B';
+		// } else if (avr < 90) {
+		// 	return 'A';
+		// } else {
+		// 	return 'S';
+		// }
+		if (avr < 60) return 'D';
+		if (avr < 70) return 'C';
+		if (avr < 80) return 'B';
+		if (avr < 90) return 'A';
+		
+		return 'S';
 	}
 
 	static int subAbsolute(int x, int y) {
