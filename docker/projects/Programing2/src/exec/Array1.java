@@ -3,7 +3,6 @@ package exec;
 public class Array1 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		double[] root; // 宣言
 		root = new double[5]; // 初期化

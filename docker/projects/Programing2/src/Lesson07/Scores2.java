@@ -5,10 +5,8 @@ import java.util.Random;
 public class Scores2 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+
 		int[][] score = new int[80][3];
-		char[] mark = new char[80];
-		int[] def = new int[80];
 
 		Random rand = new Random(); // seedなし
 		for (int i = 0; i < score.length; i++) {
@@ -17,6 +15,12 @@ public class Scores2 {
 			score[i][2] = rand.nextInt(101);
 		}
 
+		gradeProcessing(score);
+	}
+
+	static void gradeProcessing(int[][] score) {
+		char[] mark = new char[80];
+		int[] def = new int[80];
 		int wst = 100;
 		int bst = 0;
 		for (int i = 0; i < score.length; i++) {
@@ -43,8 +47,8 @@ public class Scores2 {
 			System.out.printf("%4d", def[i]);
 			System.out.println("");
 		}
-
 	}
+
 
 	static int min(int x, int y) {
 		int r = y;
@@ -63,7 +67,7 @@ public class Scores2 {
 	}
 
 	static double avrg(int x, int y) {
-		return (x + y) / 2;
+		return (x + y) / 2.0;
 	}
 
 	static char rank(int x, int y) {
@@ -84,11 +88,12 @@ public class Scores2 {
 	}
 
 	static int subAbsolute(int x, int y) {
-		if (x > y) {
-			return x - y;
-		} else {
-			return y - x;
-		}
+		// if (x > y) {
+		// 	return x - y;
+		// } else {
+		// 	return y - x;
+		// }
+		return max(x, y) - min(x,y);
 	}
 
 }
