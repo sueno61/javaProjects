@@ -4,13 +4,13 @@ class TestPermutation {
 	public static void main(String[] args) {
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j <= i; j++) {
-				System.out.println(format(p(i,j), 8));
+				System.out.println(format(p(i, j), 8));
 			}
 		}
 	}
 
 	static long p(int n, int k) {
-		return f(n) / f(n-k);
+		return f(n) / f(n - k);
 	}
 
 	static long f(int n) {
@@ -24,6 +24,6 @@ class TestPermutation {
 	static String format(long n, int width) {
 		final String BLANKS = "                ";
 		String s = String.valueOf(n);
-		return BLANKS.substring(0, width-s.length()) + s;
+		return BLANKS.substring(0, width - s.length()) + s;
 	}
 }
