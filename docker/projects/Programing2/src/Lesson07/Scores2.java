@@ -19,10 +19,8 @@ public class Scores2 {
 	}
 
 	static void gradeProcessing(int[][] score) {
-
 		char[] mark = new char[80];
 		int[] def = new int[80];
-
 		int wst = 100;
 		int bst = 0;
 		for (int i = 0; i < score.length; i++) {
@@ -69,6 +67,18 @@ public class Scores2 {
 
 	static char rank(int x, int y) {
 		double avr = avrg(x, y);
+
+		// if (avr < 60) {
+		// return 'D';
+		// } else if (avr < 70) {
+		// return 'C';
+		// } else if (avr < 80) {
+		// return 'B';
+		// } else if (avr < 90) {
+		// return 'A';
+		// } else {
+		// return 'S';
+		// }
 		if (avr < 60)
 			return 'D';
 		if (avr < 70)
@@ -77,15 +87,17 @@ public class Scores2 {
 			return 'B';
 		if (avr < 90)
 			return 'A';
+
 		return 'S';
 	}
 
 	static int subAbsolute(int x, int y) {
-		if (x > y) {
-			return x - y;
-		} else {
-			return y - x;
-		}
+		// if (x > y) {
+		// return x - y;
+		// } else {
+		// return y - x;
+		// }
+		return max(x, y) - min(x, y);
 	}
 
 }
