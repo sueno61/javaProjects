@@ -22,9 +22,10 @@ public class TestOverloading {
 	}
 
 	public static int min(int x1, int x2, int x3) {
-		if (min(x1, x2) < x3)
-			return min(x1, x2);
-		return x3;
+		// if (min(x1, x2) < x3)
+		// return min(x1, x2);
+		// return x3;
+		return min(min(x1, x2), x3);
 	}
 
 }

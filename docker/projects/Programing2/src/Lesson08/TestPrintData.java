@@ -16,8 +16,8 @@ public class TestPrintData {
 		System.out.println("d = " + d);
 	}
 
-	static void printData(int a, int b) {
-		System.out.println("a = " + a + ", b = " + b);
+	static void printData(int i1, int i2) {
+		System.out.println("i1 = " + i1 + ", i2 = " + i2);
 	}
 
 }

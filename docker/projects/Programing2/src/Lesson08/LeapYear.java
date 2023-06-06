@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class LeapYear {
 
-	public static boolean isLeapYear(int y) {
+	public static boolean isLeapYearPrev(int y) {
 		if (y % 4 != 0) {
 			return false;
 		} else if (y % 400 == 0) {
@@ -16,15 +16,25 @@ public class LeapYear {
 		}
 	}
 
+	public static boolean isLeapYear(int y) {
+		if (y % 400 == 0)
+			return true;
+		if (y % 100 == 0)
+			return false;
+		if (y % 4 == 0)
+			return true;
+		return false;
+	}
+
 	public static void main(String[] args) {
 
-		//		int y = Integer.decode(args[0]);
+		// int y = Integer.decode(args[0]);
 		//
-		//		if (isLeapYear(y)) {
-		//			System.out.println(y + "年は、うるう年です");
-		//		} else {
-		//			System.out.println(y + "年は、うるう年ではありません");
-		//		}
+		// if (isLeapYear(y)) {
+		// System.out.println(y + "年は、うるう年です");
+		// } else {
+		// System.out.println(y + "年は、うるう年ではありません");
+		// }
 
 		Random rand = new Random();
 
