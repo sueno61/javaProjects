@@ -24,7 +24,7 @@ public class TicTacToe {
 	}
 
 	public boolean isFirst() {
-		//			top = !top;
+		// top = !top;
 		return top;
 	}
 
@@ -34,7 +34,7 @@ public class TicTacToe {
 
 	public void setMark(int row, int col) {
 
-		if (top) {
+		if (isFirst()) { // top
 			board[row][col] = '○';
 		} else {
 			board[row][col] = '×';
@@ -78,8 +78,8 @@ public class TicTacToe {
 	}
 
 	public boolean isWinning() {
-		//		char mark = '○';
-		//		int cnt = 0;
+		// char mark = '○';
+		// int cnt = 0;
 
 		char[] marks = new char[board.length];
 

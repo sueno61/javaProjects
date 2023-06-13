@@ -8,7 +8,7 @@ public class TicTacToeTest {
 
 		int siz = 3;
 		TicTacToe ttt = new TicTacToe(siz, siz);
-		//		TicTacToe ttt = new TicTacToe();
+		// TicTacToe ttt = new TicTacToe();
 
 		ttt.show();
 		System.out.println("Start!　先手入力");
@@ -23,7 +23,7 @@ public class TicTacToeTest {
 			int row = sin.nextInt();
 			int col = sin.nextInt();
 
-			if (row < siz & col < siz) {
+			if (row < siz && col < siz) {
 
 				// 空いている場所か
 				if (ttt.isEmpty(row, col)) {
