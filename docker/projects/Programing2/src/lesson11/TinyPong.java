@@ -1,5 +1,3 @@
-package lesson11;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
@@ -84,21 +82,21 @@ class myPanel extends JPanel implements ActionListener, KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		switch (e.getKeyCode()) {
-		case KeyEvent.VK_UP:
-			pd = -10;
-			break;
-		case KeyEvent.VK_DOWN:
-			pd = 10;
-			break;
+			case KeyEvent.VK_UP:
+				pd = -10;
+				break;
+			case KeyEvent.VK_DOWN:
+				pd = 10;
+				break;
 		}
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
 		switch (e.getKeyCode()) {
-		case KeyEvent.VK_UP:
-		case KeyEvent.VK_DOWN:
-			pd = 0;
+			case KeyEvent.VK_UP:
+			case KeyEvent.VK_DOWN:
+				pd = 0;
 		}
 	}
 
