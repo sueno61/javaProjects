@@ -1,8 +1,6 @@
-package day1;
-
 public class hello20 {
     public static void main(String[] args) {
-        
+
         String str;
         String cur;
 
@@ -16,5 +14,5 @@ public class hello20 {
         System.out.print(str);
         System.out.println(cur + 10 + 10);
     }
-    
+
 }

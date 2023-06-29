@@ -1,5 +1,3 @@
-package Lesson12;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -36,7 +34,7 @@ public class Jyanken extends Application {
 
 		// Images
 		Image[] imgs = new Image[3];
-	
+
 		imgs[0] = new Image("rock.gif");
 		imgs[1] = new Image("scissors.gif");
 		imgs[2] = new Image("paper.gif");

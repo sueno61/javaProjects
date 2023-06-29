@@ -1,9 +1,7 @@
-package day1;
-
 public class hello23 {
 
     public static void main(String[] args) {
-        
+
         int a = 10;
         long b = 20;
 
@@ -17,5 +15,5 @@ public class hello23 {
         int ri = a + c;
         System.out.println(ri);
     }
-    
+
 }

@@ -1,5 +1,3 @@
-package Lesson12;
-
 public class MyBirthday {
 
 	int y, md;
@@ -52,6 +50,11 @@ public class MyBirthday {
 
 		int m = md / 100;
 		int d = md % 100;
+
+		if (m == 1 || m == 2) {
+			m = m + 12;
+			y = y - 1;
+		}
 
 		int C = y / 100;
 		int Y = y % 100;

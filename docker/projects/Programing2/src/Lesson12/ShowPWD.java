@@ -1,6 +1,5 @@
-package Lesson12;
-
 import java.io.File;
+
 public class ShowPWD {
 
     public static void main(String[] args) {

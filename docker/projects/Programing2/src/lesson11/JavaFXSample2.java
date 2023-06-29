@@ -1,3 +1,4 @@
+package Lesson11;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -26,7 +27,14 @@ public class JavaFXSample2 extends Application {
 		Label l3 = new Label("are");
 		Label l4 = new Label("you?");
 		// scene にボタンとラベルを設置
-		rootNode.getChildren().addAll(l1, l2, l3, l4);
+		rootNode.getChildren().addAll(l2, l3, l4, l1);
 		myStage.show();
 	}
+
+	/*
+	 * Stage（ウィンドウ） :myStage
+	 * |- Scene（ウィンドウに表示する画面） :myScene
+	 * |- Pane（部品を束ねる） :rootNode (FlowPane)
+	 * |- Labelなど（部品） :l1, l2, l3, l4
+	 */
 }

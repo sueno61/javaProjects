@@ -1,5 +1,3 @@
-package Lesson12;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -51,12 +49,12 @@ public class MyBirthdayGUI extends Application {
 		Button btn = new Button("表示");
 
 		// Images
-		//		Image[] imgs = new Image[3];
-		//		imgs[0] = new Image("rock.gif");
-		//		imgs[1] = new Image("scissors.gif");
-		//		imgs[2] = new Image("paper.gif");
+		// Image[] imgs = new Image[3];
+		// imgs[0] = new Image("rock.gif");
+		// imgs[1] = new Image("scissors.gif");
+		// imgs[2] = new Image("paper.gif");
 
-		//		ImageView myHand = new ImageView();
+		// ImageView myHand = new ImageView();
 
 		// ボタンが押されたら・・・
 		btn.setOnAction(new EventHandler<ActionEvent>() {
@@ -70,7 +68,7 @@ public class MyBirthdayGUI extends Application {
 				wareki.setText(mb.toWareki());
 				youbi.setText(mb.getDayOfWeek());
 
-				//				myHand.setImage(imgs[0]);
+				// myHand.setImage(imgs[0]);
 
 			}
 		});
