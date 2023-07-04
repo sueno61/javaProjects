@@ -1,3 +1,5 @@
+import java.util.Random;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -28,9 +30,12 @@ public class Jyanken extends Application {
 
 		// labelを作成
 		Label response = new Label("ジャンケンしよう！");
+		Label result = new Label(" ");
 
 		// Buttonの作成
-		Button btnG = new Button("グー");
+		Button btnR = new Button("グー");
+		Button btnS = new Button("チョキ");
+		Button btnP = new Button("パー");
 
 		// Images
 		Image[] imgs = new Image[3];
@@ -40,17 +45,64 @@ public class Jyanken extends Application {
 		imgs[2] = new Image("paper.gif");
 
 		ImageView myHand = new ImageView();
+		ImageView javaHand = new ImageView();
+
 		// ボタンが押されたら・・・
-		btnG.setOnAction(new EventHandler<ActionEvent>() {
+		btnR.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent ae) {
+				int M = 0;
+				myHand.setImage(imgs[M]);
+				int J = getJavaHand();
+				javaHand.setImage(imgs[J]);
+				result.setText(HANTEI(M, J));
+			}
+		});
 
-				myHand.setImage(imgs[0]);
+		btnS.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent ae) {
+				int M = 1;
+				myHand.setImage(imgs[M]);
+				int J = getJavaHand();
+				javaHand.setImage(imgs[J]);
+				result.setText(HANTEI(M, J));
+			}
+		});
 
+		btnP.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent ae) {
+				int M = 2;
+				myHand.setImage(imgs[M]);
+				int J = getJavaHand();
+				javaHand.setImage(imgs[J]);
+				result.setText(HANTEI(M, J));
 			}
 		});
 
 		// scene にラベルを設置
-		rootNode.getChildren().addAll(btnG, response, myHand);
+		rootNode.getChildren().addAll(btnR, btnS, btnP, response, myHand, javaHand, result);
 		myStage.show();
+	}
+
+	public int getJavaHand() {
+		Random rand = new Random();
+		return rand.nextInt(3);
+	}
+
+	public String HANTEI(int M, int J) {
+		// グー、チョキ、パー
+		// たて：人の手、横：javaの手
+		// 0:引き分け、1:人の勝ち、2:javaの勝ち
+		int[][] wlMat = {
+				{ 0, 1, 2 },
+				{ 2, 0, 1 },
+				{ 1, 2, 0 }
+		};
+		String[] commt = {
+				"引き分けです",
+				"あなたの勝ち",
+				"javaの勝ち"
+		};
+
+		return commt[wlMat[M][J]];
 	}
 }

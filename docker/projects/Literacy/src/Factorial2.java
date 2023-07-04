@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 public class Factorial2 {
 
 	public static void main(String[] args) {
@@ -9,6 +11,7 @@ public class Factorial2 {
 
 		System.out.println(f(n) + "（float）");
 		System.out.println((int) f(n) + "(floatをintに型変換) ");
+		System.out.println(BigDecimal.valueOf(f(n)).toPlainString() + "(floatの指数表現を回避) ");
 		System.out.println(fi(n) + "(intで階乗計算) ");
 		System.out.println(fl(n) + "(longで階乗計算) ");
 

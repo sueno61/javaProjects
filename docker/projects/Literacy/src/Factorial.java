@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 public class Factorial {
 	public static void main(String[] args) {
 		int i, n, kaijoi;
@@ -20,6 +22,7 @@ public class Factorial {
 			kaijoi = kaijoi * i;
 		}
 		System.out.println(n + "! = " + kaijo + " (double)");
+		System.out.println(n + "! = " + BigDecimal.valueOf(kaijo).toPlainString());
 
 		System.out.println(n + "! = " + kaijoi + " (int)");
 	}
