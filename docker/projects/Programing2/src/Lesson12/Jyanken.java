@@ -30,7 +30,6 @@ public class Jyanken extends Application {
 
 		// labelを作成
 		Label response = new Label("ジャンケンしよう！");
-		Label result = new Label(" ");
 
 		// Buttonの作成
 		Button btnR = new Button("グー");
@@ -47,39 +46,41 @@ public class Jyanken extends Application {
 		ImageView myHand = new ImageView();
 		ImageView javaHand = new ImageView();
 
-		// ボタンが押されたら・・・
+		// グー・ボタンが押されたら・・・
 		btnR.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent ae) {
 				int M = 0;
 				myHand.setImage(imgs[M]);
 				int J = getJavaHand();
 				javaHand.setImage(imgs[J]);
-				result.setText(HANTEI(M, J));
+				response.setText(HANTEI(M, J));
 			}
 		});
 
+		// チョキ・ボタンが押されたら・・・
 		btnS.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent ae) {
 				int M = 1;
 				myHand.setImage(imgs[M]);
 				int J = getJavaHand();
 				javaHand.setImage(imgs[J]);
-				result.setText(HANTEI(M, J));
+				response.setText(HANTEI(M, J));
 			}
 		});
 
+		// パー・ボタンが押されたら・・・
 		btnP.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent ae) {
 				int M = 2;
 				myHand.setImage(imgs[M]);
 				int J = getJavaHand();
 				javaHand.setImage(imgs[J]);
-				result.setText(HANTEI(M, J));
+				response.setText(HANTEI(M, J));
 			}
 		});
 
 		// scene にラベルを設置
-		rootNode.getChildren().addAll(btnR, btnS, btnP, response, myHand, javaHand, result);
+		rootNode.getChildren().addAll(btnR, btnS, btnP, myHand, javaHand, response);
 		myStage.show();
 	}
 
