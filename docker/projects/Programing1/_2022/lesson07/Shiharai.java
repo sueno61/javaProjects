@@ -5,7 +5,7 @@ public class Shiharai {
         int tanka = Integer.parseInt(line);
         line = System.console().readLine("数量=");
         int suu = Integer.parseInt(line);
-        
+
         if (tanka <= 0 || suu <= 0) {
             System.out.println("単価および数量は正の値にしてください。");
         } else {
@@ -15,7 +15,8 @@ public class Shiharai {
                 kingaku = kingaku + 530;
             }
 
-            System.out.println("支払い金額は" + kingaku + "円です。");
+            // System.out.println("支払い金額は" + kingaku + "円です。");
+            System.out.println(kingaku);
         }
     }
 }
