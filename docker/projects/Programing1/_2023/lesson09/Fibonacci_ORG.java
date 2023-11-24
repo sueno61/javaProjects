@@ -1,5 +1,7 @@
-public class Fibonacci {
+public class Fibonacci_ORG {
     public static void main(String[] args) {
+        int a = 0;
+        int b = 1;
         String s = System.console().readLine("フィボナッチ数列の数：");
         int n = Integer.parseInt(s);
         if (n < 2) {
@@ -7,18 +9,18 @@ public class Fibonacci {
         } else {
             System.out.println("フィボナッチ数列（最初の " + n + " 項）：");
             for (int i = 1; i <= n; i = i + 1) {
-                System.out.print(FB(i) + " ");
+                if (i == 1) {
+                    System.out.print(a + " ");
+                } else if (i == 2) {
+                    System.out.print(b + " ");
+                } else {
+                    int f = a + b;
+                    System.out.print(f + " ");
+                    a = b;
+                    b = f;
+                }
             }
             System.out.println();
         }
-    }
-
-    public static int FB(int cnt) {
-        if (cnt == 1)
-            return 0;
-        if (cnt == 2)
-            return 1;
-
-        return FB(cnt - 2) + FB(cnt - 1);
     }
 }
