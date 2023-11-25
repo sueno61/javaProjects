@@ -4,7 +4,7 @@ public class Fibonacci_ORG {
         int b = 1;
         String s = System.console().readLine("フィボナッチ数列の数：");
         int n = Integer.parseInt(s);
-        if (n < 2) {
+        if (n <= 2) {
             System.out.println("表示するフィボナッチ数列の数は2より大きい数を入力してください");
         } else {
             System.out.println("フィボナッチ数列（最初の " + n + " 項）：");
